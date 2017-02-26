@@ -90,6 +90,7 @@
                 li {
                     list-style: none;
                     list-style-type: none;
+                    font-family: 'Raleway', sans-serif;
                     padding: 0px 5px;
                     float: left;
 
@@ -147,8 +148,8 @@
                     height: inherit;
                     display: inline-block;
                     font-size: 16px;
-                    font-weight: 500;
-                    @include letter-spacing(4px);
+                    font-weight: 300;
+                    @include letter-spacing(2px);
                 }
             }
         }
