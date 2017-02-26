@@ -36,6 +36,22 @@
                 cursor: pointer;
                 position: relative;
 
+                span {
+                    @include transition(transform 0.5s $transition-easing-easeInCirc, top 0.5s $transition-easing-easeInCirc);
+                    &.rotate-due {
+                        @include css3-prefix('transform', 'rotate(-45deg)');
+                        top: 20px;
+                    }
+                }
+
+                i {
+                    @include transition(transform 0.5s $transition-easing-easeInCirc, width 0.5s $transition-easing-easeInCirc);
+                    &.rotate {
+                        width: 30px;
+                        @include css3-prefix('transform', 'rotate(45deg)');
+                    }
+                }
+
                 &.z-index {
                     z-index: 2;
                     position: relative;
@@ -67,7 +83,7 @@
             ul {
                 position: relative;
                 list-style: none;
-                top: 5px;
+                top: 11px;
                 padding: 0;
                 margin: 0;
 
@@ -77,21 +93,21 @@
                     padding: 0px 5px;
                     float: left;
 
-                    &:nth-child(0) {
+                    &:nth-child(1) {
                         a {
                             @include opacity(0);
                             @include transition(opacity 0.5s $transition-easing-easeInCirc);
                         }
                     }
 
-                    &:nth-child(1) {
+                    &:nth-child(2) {
                         a {
                             @include opacity(0);
                             @include transition(opacity 1s $transition-easing-easeInCirc);
                         }
                     }
 
-                    &:nth-child(2) {
+                    &:nth-child(3) {
                         a {
                             @include opacity(0);
                             @include transition(opacity 1.5s $transition-easing-easeInCirc);
@@ -99,12 +115,6 @@
                     }
 
                     &.open {
-                        &:nth-child(0) {
-                            a {
-                                @include opacity(1);
-                            }
-                        }
-
                         &:nth-child(1) {
                             a {
                                 @include opacity(1);
@@ -112,6 +122,12 @@
                         }
 
                         &:nth-child(2) {
+                            a {
+                                @include opacity(1);
+                            }
+                        }
+
+                        &:nth-child(3) {
                             a {
                                 @include opacity(1);
                             }
@@ -130,9 +146,9 @@
                     margin: 15px 0px;
                     height: inherit;
                     display: inline-block;
-                    font-size: 15px;
+                    font-size: 16px;
                     font-weight: 500;
-                    @include letter-spacing(2px);
+                    @include letter-spacing(4px);
                 }
             }
         }
