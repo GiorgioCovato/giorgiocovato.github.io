@@ -41,9 +41,9 @@ var CoverView = {
         var _cover = this.$el.height(),
             wHeight = $(window).scrollTop();
         if ( wHeight >= _cover ) {
-            this.$el.find('header nav ul li a').css('color', '#000000');
-            this.$el.find('header nav .menu-trigger span').css('background-color', '#000000');
-            this.$el.find('header nav .menu-trigger i').css('background-color', '#000000');
+            this.$el.find('header nav ul li a').css('color', '#FFFFFF');
+            this.$el.find('header nav .menu-trigger span').css('background-color', '#FFFFFF');
+            this.$el.find('header nav .menu-trigger i').css('background-color', '#FFFFFF');
         } else {
             //this.$el.find('header nav ul li a').css('color', '#FFFFFF');
             this.$el.find('header nav .menu-trigger span').css('background-color', '#FFFFFF');
@@ -52,11 +52,11 @@ var CoverView = {
     },
 
     showMenu : function(evt) {
-        this.$el.find('#menu ul li').addClass('open');
-        this.$el.find('#menu .section-nav').addClass('open');
-        $(evt.currentTarget).addClass('z-index');
-        this.$el.find('header nav .menu-trigger span').css('background-color', '#000000');
-        this.$el.find('header nav .menu-trigger i').css('background-color', '#000000');
+        this.$el.find('#menu ul li').toggleClass('open');
+        this.$el.find('#menu .section-nav').toggleClass('open');
+        $(evt.currentTarget).toggleClass('z-index');
+        //this.$el.find('header nav .menu-trigger span').css('background-color', '#FFFFFF');
+        //this.$el.find('header nav .menu-trigger i').css('background-color', '#FFFFFF');
     },
 
     showText : function() {
