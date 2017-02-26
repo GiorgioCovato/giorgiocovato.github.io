@@ -1,1 +1,511 @@
+/* [ COMMON ] */
+/* [ VARS ] */
+/* [ MIXIN ] */
+/* -------------------------------------------------------------
+	Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+	By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
 
+	List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+	The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+	ENDING css files
+
+	note: All CSS3 Properties are being supported by Safari 5
+	more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+/*@mixin transition($properties...) {
+
+	@if length($properties) >= 1 {
+		@include css3-prefix('transition', $properties);
+	}
+
+	@else {
+		@include css3-prefix('transition',  "all 0.2s ease-in-out 0s");
+	}
+}*/
+/* [ COVER ] */
+/* [ VARS ] */
+/* [ MIXIN ] */
+/* -------------------------------------------------------------
+	Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+	By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+	List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+	The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+	ENDING css files
+
+	note: All CSS3 Properties are being supported by Safari 5
+	more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+/*@mixin transition($properties...) {
+
+	@if length($properties) >= 1 {
+		@include css3-prefix('transition', $properties);
+	}
+
+	@else {
+		@include css3-prefix('transition',  "all 0.2s ease-in-out 0s");
+	}
+}*/
+.cover {
+  height: 100%;
+  background-color: #000; }
+  .cover header {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1; }
+    .cover header nav {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+      .cover header nav .section-nav {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        filter: alpha(opacity=0) ;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" ;
+        -webkit-opacity: 0 ;
+        -khtml-opacity: 0 ;
+        -moz-opacity: 0 ;
+        -ms-opacity: 0 ;
+        -o-opacity: 0 ;
+        opacity: 0 ;
+        z-index: -1; }
+        .cover header nav .section-nav.open {
+          filter: alpha(opacity=100) ;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+          -webkit-opacity: 1 ;
+          -khtml-opacity: 1 ;
+          -moz-opacity: 1 ;
+          -ms-opacity: 1 ;
+          -o-opacity: 1 ;
+          opacity: 1 ;
+          z-index: 1; }
+      .cover header nav a {
+        display: inline;
+        float: right;
+        width: 30px;
+        height: 25px;
+        margin: 15px 25px;
+        cursor: pointer;
+        position: relative; }
+        .cover header nav a.z-index {
+          z-index: 2;
+          position: relative; }
+        .cover header nav a span {
+          content: "";
+          display: inline-block;
+          position: relative;
+          top: 9px;
+          float: right;
+          opacity: 1;
+          height: 1px;
+          width: 30px;
+          background-color: #fff; }
+        .cover header nav a i {
+          display: block;
+          position: absolute;
+          top: 20px;
+          opacity: 1;
+          height: 1px;
+          width: 15px;
+          background-color: #fff; }
+      .cover header nav ul {
+        position: absolute;
+        list-style: none;
+        float: left;
+        top: 55px;
+        padding: 0;
+        margin: 0; }
+        .cover header nav ul li {
+          list-style: none;
+          list-style-type: none;
+          padding: 0px 25px; }
+          .cover header nav ul li:nth-child(1) a {
+            filter: alpha(opacity=100) ;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+            -webkit-opacity: 1 ;
+            -khtml-opacity: 1 ;
+            -moz-opacity: 1 ;
+            -ms-opacity: 1 ;
+            -o-opacity: 1 ;
+            opacity: 1 ;
+            -webkit-transition: opacity 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            -moz-transition: opacity 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            -o-transition: opacity 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition: opacity 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+          .cover header nav ul li:nth-child(2) a {
+            filter: alpha(opacity=100) ;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+            -webkit-opacity: 1 ;
+            -khtml-opacity: 1 ;
+            -moz-opacity: 1 ;
+            -ms-opacity: 1 ;
+            -o-opacity: 1 ;
+            opacity: 1 ;
+            -webkit-transition: opacity 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            -moz-transition: opacity 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            -o-transition: opacity 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition: opacity 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+          .cover header nav ul li:nth-child(3) a {
+            filter: alpha(opacity=100) ;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+            -webkit-opacity: 1 ;
+            -khtml-opacity: 1 ;
+            -moz-opacity: 1 ;
+            -ms-opacity: 1 ;
+            -o-opacity: 1 ;
+            opacity: 1 ;
+            -webkit-transition: opacity 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            -moz-transition: opacity 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            -o-transition: opacity 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition: opacity 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+          .cover header nav ul li.open:nth-child(1) a {
+            filter: alpha(opacity=100) ;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+            -webkit-opacity: 1 ;
+            -khtml-opacity: 1 ;
+            -moz-opacity: 1 ;
+            -ms-opacity: 1 ;
+            -o-opacity: 1 ;
+            opacity: 1 ; }
+          .cover header nav ul li.open:nth-child(2) a {
+            filter: alpha(opacity=100) ;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+            -webkit-opacity: 1 ;
+            -khtml-opacity: 1 ;
+            -moz-opacity: 1 ;
+            -ms-opacity: 1 ;
+            -o-opacity: 1 ;
+            opacity: 1 ; }
+          .cover header nav ul li.open:nth-child(3) a {
+            filter: alpha(opacity=100) ;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+            -webkit-opacity: 1 ;
+            -khtml-opacity: 1 ;
+            -moz-opacity: 1 ;
+            -ms-opacity: 1 ;
+            -o-opacity: 1 ;
+            opacity: 1 ; }
+        .cover header nav ul a {
+          cursor: pointer;
+          text-decoration: none;
+          color: #000;
+          text-transform: uppercase;
+          font-family: 'Raleway', sans-serif;
+          width: inherit;
+          margin: 15px 0px;
+          height: inherit;
+          display: block;
+          font-size: 2em ;
+          font-weight: 700;
+          letter-spacing: 2px; }
+  .cover .text {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%) ;
+    -khtml-transform: translate(-50%, -50%) ;
+    -moz-transform: translate(-50%, -50%) ;
+    -ms-transform: translate(-50%, -50%) ;
+    -o-transform: translate(-50%, -50%) ;
+    transform: translate(-50%, -50%) ;
+    top: 50%;
+    left: 50%;
+    text-align: center; }
+    .cover .text h1 {
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 15px;
+      font-size: 4em ;
+      padding: 35px 0 70px 0;
+      font-family: 'Raleway', sans-serif;
+      filter: alpha(opacity=0) ;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" ;
+      -webkit-opacity: 0 ;
+      -khtml-opacity: 0 ;
+      -moz-opacity: 0 ;
+      -ms-opacity: 0 ;
+      -o-opacity: 0 ;
+      opacity: 0 ;
+      -webkit-transition: opacity 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -moz-transition: opacity 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -o-transition: opacity 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: opacity 2s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+      .cover .text h1.show {
+        filter: alpha(opacity=100) ;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+        -webkit-opacity: 1 ;
+        -khtml-opacity: 1 ;
+        -moz-opacity: 1 ;
+        -ms-opacity: 1 ;
+        -o-opacity: 1 ;
+        opacity: 1 ; }
+    .cover .text h2 {
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 2.5em ;
+      padding-bottom: 0.5em;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      filter: alpha(opacity=0) ;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" ;
+      -webkit-opacity: 0 ;
+      -khtml-opacity: 0 ;
+      -moz-opacity: 0 ;
+      -ms-opacity: 0 ;
+      -o-opacity: 0 ;
+      opacity: 0 ;
+      -webkit-transition: opacity 3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -moz-transition: opacity 3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -o-transition: opacity 3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: opacity 3s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+      .cover .text h2.show {
+        filter: alpha(opacity=100) ;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+        -webkit-opacity: 1 ;
+        -khtml-opacity: 1 ;
+        -moz-opacity: 1 ;
+        -ms-opacity: 1 ;
+        -o-opacity: 1 ;
+        opacity: 1 ; }
+    .cover .text h3 {
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.4em ;
+      font-family: 'Raleway', sans-serif;
+      padding-bottom: 1.25em;
+      font-weight: 300;
+      filter: alpha(opacity=0) ;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" ;
+      -webkit-opacity: 0 ;
+      -khtml-opacity: 0 ;
+      -moz-opacity: 0 ;
+      -ms-opacity: 0 ;
+      -o-opacity: 0 ;
+      opacity: 0 ;
+      -webkit-transition: opacity 4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -moz-transition: opacity 4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -o-transition: opacity 4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: opacity 4s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+      .cover .text h3:before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 1px;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -100%) ;
+        -khtml-transform: translate(-50%, -100%) ;
+        -moz-transform: translate(-50%, -100%) ;
+        -ms-transform: translate(-50%, -100%) ;
+        -o-transform: translate(-50%, -100%) ;
+        transform: translate(-50%, -100%) ; }
+      .cover .text h3.show {
+        filter: alpha(opacity=100) ;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" ;
+        -webkit-opacity: 1 ;
+        -khtml-opacity: 1 ;
+        -moz-opacity: 1 ;
+        -ms-opacity: 1 ;
+        -o-opacity: 1 ;
+        opacity: 1 ; }
+
+/* [ ABOUT ] */
+/* [ VARS ] */
+/* [ MIXIN ] */
+/* -------------------------------------------------------------
+	Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+	By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+	List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+	The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+	ENDING css files
+
+	note: All CSS3 Properties are being supported by Safari 5
+	more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+/*@mixin transition($properties...) {
+
+	@if length($properties) >= 1 {
+		@include css3-prefix('transition', $properties);
+	}
+
+	@else {
+		@include css3-prefix('transition',  "all 0.2s ease-in-out 0s");
+	}
+}*/
+.about {
+  position: relative;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  clear: both;
+  filter: alpha(opacity=0) ;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" ;
+  -webkit-opacity: 0 ;
+  -khtml-opacity: 0 ;
+  -moz-opacity: 0 ;
+  -ms-opacity: 0 ;
+  -o-opacity: 0 ;
+  opacity: 0 ;
+  display: none; }
+  .about .text {
+    position: absolute;
+    -webkit-transform: translateX(-50%) ;
+    -khtml-transform: translateX(-50%) ;
+    -moz-transform: translateX(-50%) ;
+    -ms-transform: translateX(-50%) ;
+    -o-transform: translateX(-50%) ;
+    transform: translateX(-50%) ;
+    top: 25%;
+    left: 50%;
+    text-align: center; }
+    .about .text h1 {
+      color: #000;
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 5px;
+      font-size: 2.5em ;
+      padding: 0px 0 50px 0; }
+    .about .text h2 {
+      color: #000;
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+      letter-spacing: 5px;
+      font-size: 1em ;
+      padding: 0px 0 20px 0; }
+    .about .text p {
+      color: #000;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      margin-bottom: 20px;
+      text-align: left;
+      letter-spacing: 0px;
+      font-size: 1.4em ; }
+    .about .text .skills {
+      color: #000;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      margin-bottom: 5px;
+      text-align: left;
+      letter-spacing: 0px;
+      font-size: 14px ; }
+    .about .text .title-skills {
+      color: #000;
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+      letter-spacing: 5px;
+      font-size: 1em ;
+      padding: 30px 0 30px 0; }
+
+/* [PORTFOLIO] */
+/* [ VARS ] */
+/* [ MIXIN ] */
+/* -------------------------------------------------------------
+	Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+	By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+	List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+	The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+	ENDING css files
+
+	note: All CSS3 Properties are being supported by Safari 5
+	more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+/*@mixin transition($properties...) {
+
+	@if length($properties) >= 1 {
+		@include css3-prefix('transition', $properties);
+	}
+
+	@else {
+		@include css3-prefix('transition',  "all 0.2s ease-in-out 0s");
+	}
+}*/
+.portfolio {
+  position: relative;
+  background-color: #000;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  clear: both; }
+  .portfolio .slide {
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+  .portfolio .slide-1 {
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+  .portfolio .slide-2 {
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+
+html {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  height: 100%; }
+  html.noscroll {
+    overflow: hidden;
+    height: 100%; }
+    html.noscroll body {
+      overflow: hidden;
+      height: 100%; }
+  html body {
+    position: relative;
+    margin: 0px;
+    min-width: initial !important;
+    height: 100%;
+    background: #fff;
+    color: #000;
+    font-size: 75%;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    overflow-x: hidden; }
+    html body #content {
+      height: 100%; }
+      html body #content #web-app-content {
+        height: 100%; }
+        html body #content #web-app-content .trigger-section {
+          position: absolute;
+          top: 0;
+          left: 100%;
+          margin: 5px -10px;
+          z-index: 1;
+          -webkit-transform: translateX(-100%) ;
+          -khtml-transform: translateX(-100%) ;
+          -moz-transform: translateX(-100%) ;
+          -ms-transform: translateX(-100%) ;
+          -o-transform: translateX(-100%) ;
+          transform: translateX(-100%) ; }
+          html body #content #web-app-content .trigger-section a {
+            display: block; }
+    html body img {
+      border: none;
+      width: 100%;
+      display: block; }
+    html body h1, html body h2, html body h3, html body h4, html body h5, html body h6, html body p {
+      margin: 0;
+      padding: 0; }
+    html body .wrapper {
+      width: 100%;
+      margin: 0 auto; }
