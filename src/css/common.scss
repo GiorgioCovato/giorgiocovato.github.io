@@ -1,1 +1,48 @@
+/* [ COMMON ] */
 
+@import 'vars', 'mixin', 'cover', 'about', 'portfolio';
+
+html {
+	font-smooth:always; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; height: 100%;
+	&.noscroll {
+		overflow: hidden; height: 100%;
+		body {
+			overflow: hidden; height: 100%;
+		}
+	}
+	body {
+		position: relative; margin: 0px; min-width: initial !important; height: 100%; background: $color-global-white; color: $color-global-black; font-size: 75%; font-family: 'Raleway', Arial, sans-serif; font-smooth:always; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; overflow-x: hidden;
+		#content {
+			height: 100%;
+
+			#web-app-content {
+				height: 100%;
+
+				.trigger-section {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    margin: 5px -10px;
+                    z-index: 1;
+                    @include css3-prefix('transform', 'translateX(-100%)');
+                    a {
+                    	display: block;
+                    }
+				}
+			}
+		}
+		img {
+			border: none;
+			width: 100%;
+			display: block;
+		}
+		h1, h2, h3, h4, h5, h6, p {
+			margin: 0;
+			padding: 0;
+		}
+		.wrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+}

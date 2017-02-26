@@ -1,0 +1,207 @@
+/* [ COVER ] */
+
+@import 'vars', 'mixin';
+
+.cover {
+    height: 100%;
+    background-color: $color-global-black;
+
+    header {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+
+        nav {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            .section-nav {
+                @include opacity(0);
+                z-index: -1;
+
+                &.open {
+                    @include opacity(1);
+                    z-index: 1;
+                }
+            }
+
+            a {
+                display: inline;
+                float: left;
+                width: 30px;
+                height: 25px;
+                margin: 15px 25px;
+                cursor: pointer;
+                position: relative;
+
+                &.z-index {
+                    z-index: 2;
+                    position: relative;
+                }
+
+                span {
+                    content: "";
+                    display: inline-block;
+                    position: relative;
+                    top: 9px;
+                    float: right;
+                    opacity: 1;
+                    height: 1px;
+                    width: 30px;
+                    background-color: $color-global-white;
+                }
+
+                i {
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    opacity: 1;
+                    height: 1px;
+                    width: 15px;
+                    background-color: $color-global-white;
+                }
+            }
+
+            ul {
+                position: relative;
+                list-style: none;
+                top: 5px;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    list-style: none;
+                    list-style-type: none;
+                    padding: 0px 5px;
+                    float: left;
+
+                    &:nth-child(0) {
+                        a {
+                            @include opacity(0);
+                            @include transition(opacity 0.5s $transition-easing-easeInCirc);
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        a {
+                            @include opacity(0);
+                            @include transition(opacity 1s $transition-easing-easeInCirc);
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        a {
+                            @include opacity(0);
+                            @include transition(opacity 1.5s $transition-easing-easeInCirc);
+                        }
+                    }
+
+                    &.open {
+                        &:nth-child(0) {
+                            a {
+                                @include opacity(1);
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            a {
+                                @include opacity(1);
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            a {
+                                @include opacity(1);
+                            }
+                        }
+
+                    }
+                }
+
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: 'Raleway', sans-serif;
+                    width: inherit;
+                    margin: 15px 0px;
+                    height: inherit;
+                    display: inline-block;
+                    font-size: 15px;
+                    font-weight: 500;
+                    @include letter-spacing(2px);
+                }
+            }
+        }
+    }
+
+    .text {
+        position: absolute;
+        @include css3-prefix('transform', 'translate(-50%, -50%)');
+        top: 50%;
+        left: 50%;
+        text-align: center;
+
+        h1 {
+            color: $color-global-white;
+            text-transform: uppercase;
+            @include letter-spacing(15px);
+            @include font-size(4em);
+            padding: 35px 0 70px 0;
+            font-family: 'Raleway', sans-serif;
+            @include opacity(0);
+            @include transition(opacity 2s $transition-easing-easeInCirc);
+
+            &.show {
+                @include opacity(1);
+            }
+        }
+
+        h2 {
+            color: $color-global-white;
+            text-transform: uppercase;
+            @include letter-spacing(5px);
+            @include font-size(2.5em);
+            padding-bottom: 0.5em;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            @include opacity(0);
+            @include transition(opacity 3s $transition-easing-easeInCirc);
+
+            &.show {
+                @include opacity(1);
+            }
+        }
+
+        h3 {
+            color: $color-global-white;
+            text-transform: uppercase;
+            @include letter-spacing(2px);
+            @include font-size(1.4em);
+            font-family: 'Raleway', sans-serif;
+            padding-bottom: 1.25em;
+            font-weight: 300;
+            @include opacity(0);
+            @include transition(opacity 4s $transition-easing-easeInCirc);
+
+            &:before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 1px;
+                background-color: $color-global-white;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                @include css3-prefix('transform', 'translate(-50%, -100%)');
+            }
+
+            &.show {
+                @include opacity(1);
+            }
+        }
+    }
+}
